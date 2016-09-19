@@ -11,6 +11,10 @@ abstract class Migration
      */
     protected $connection;
 
+    public function __construct() {
+      $GLOBALS['source_dbaudit'] = 'migration_' + get_called_class();
+    }
+
     /**
      * Get the migration connection name.
      *
